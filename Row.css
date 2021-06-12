@@ -1,0 +1,44 @@
+.row
+{
+    margin-left: 20px;
+    color: white;
+}
+.row-posters
+{
+    display: flex;
+    overflow-y: hidden;/*to prevent the vertical axis of the
+    images fro scrolling*/
+    overflow-x: scroll;
+    padding: 20px;/*This gives room for the posters to pop out
+    without being cropped when a mouse is hovered over it*/
+    
+
+}
+
+.row-posters::-webkit-scrollbar{
+    display: none; /*This style tells the web browser
+     not to display any scrollbars on this site*/
+}
+
+.row-poster{
+    width: 100%;
+    object-fit: contain; /*keeps the aspect ratio of the iages
+    so that they remain high quality*/
+    max-height: 100px; /*Changes the height of the images into 
+    a row from a column*/
+    margin-right: 10px;/**more like justifying content
+     and spacing around*/
+     transition: transform 450ms;
+}
+.row-poster:hover{
+    transform: scale(1.08);
+
+}
+
+.row-posterLarge{
+    max-height: 250px;
+}
+
+.row-posterLarge:hover{
+    transform: scale(1.09);
+}
